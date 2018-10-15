@@ -8,7 +8,7 @@
 ## :construction: Development
 
 ```bash
-$> git clone https://github.com/nwplus/nwhplus2019.git
+$> git clone https://github.com/nwplus/nwplus2019.git
 $> cd nwplus2019
 $> yarn install
 $> yarn start
