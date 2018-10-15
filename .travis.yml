@@ -1,0 +1,22 @@
+# Travis Environment Configuration
+
+language: node_js
+node_js:
+  - "8.10"
+notifications:
+  email: false
+
+# Travis Pipeline
+
+before_script:
+  - make deps
+  - yarn global add nyc
+  - yarn global add codecov
+
+script:
+  - make lint   # static analysis
+  - make build  # attempt to compile web app
+  - make test   # run all tests
+
+after_success:
+  - make report-coverage
