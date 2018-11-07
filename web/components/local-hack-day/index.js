@@ -20,14 +20,6 @@ import panelTrain from '../../assets/panel-train.svg';
 
 import bearCircle from '../../assets/bear-circle.svg';
 
-// stories assets import
-import spencerBg from '../../assets/stories/spencer-bg.svg';
-import spencer from '../../assets/stories/spencer.png';
-import oliviaBg from '../../assets/stories/olivia-bg.svg';
-import olivia from '../../assets/stories/olivia.png';
-import avinashBg from '../../assets/stories/avinash-bg.svg';
-import avinash from '../../assets/stories/avinash.png';
-
 const getImage = (alt, src, className = '') => (
   <img
     className={className}
@@ -55,57 +47,6 @@ const getFaqSection = section => (
 );
 
 const ROW_STYLE = 'pad-sides-tera pad-bottom-section scale-pad-sides-laptop container-width';
-
-const userToText = {
-  spencer: (
-    <div>
-      <h5>Spencer, <a href="https://devpost.com/software/maplemesh" target="_blank" rel="noopener noreferrer">MapleMesh</a></h5>
-      <p>
-        I was able to come to nwHacks by myself and
-         leave with many friends I am still connected with.
-        It was such a fun experience because of the great
-         energy that the nwHacks organizers put into it.
-      </p>
-    </div>
-  ),
-  olivia: (
-    <div>
-      <h5>Olivia, <a href="https://devpost.com/software/rapid-response-sa4pi1" target="_blank" rel="noopener noreferrer">Rapid Response</a></h5>
-      <p>
-        nwHacks was one of the most welcoming and inspiring hackathons I’ve ever attended.
-         I showed up without a team nor an idea,
-          and I left with close new friends and an app that solved a real problem.
-           The community at nwHacks was like no other,
-           and I feel so fortunate to have been a small part of it.
-      </p>
-    </div>
-  ),
-  avinash: (
-    <div>
-      <h5>Avinash, <a href="https://devpost.com/software/talky" target="_blank" rel="noopener noreferrer">Talky</a></h5>
-      <p>
-        Attending nwHacks 2018 was one of the best decisions I made.
-        The coolest things I saw was the use of NFC chips
-        in our check-in tags that were used to access food and more.
-        It felt like something out of movie
-        and it was an innovative idea that I&apos;ve never seen at another hackathon.
-        Building Talky was an absolute blast and I can&apos;t wait to attend next year!
-      </p>
-    </div>
-  ),
-};
-
-const userToBg = {
-  spencer: spencerBg,
-  olivia: oliviaBg,
-  avinash: avinashBg,
-};
-
-const userToImg = {
-  spencer,
-  olivia,
-  avinash,
-};
 
 class LocalHackDay extends React.Component {
   componentDidMount() {
@@ -224,29 +165,6 @@ class LocalHackDay extends React.Component {
                 minds for an epic two day event.
               </p>
             </div>
-          </div>
-        </div>
-
-        <div
-          ref={node => this.storiesDiv = node}
-          className={`${ROW_STYLE}`}
-        >
-          <h2 className="fill-width margin-bottom-xxl">Hacker stories</h2>
-          <div className="flex jc-between row-stories scale-row-tablet">
-            {
-              ['spencer', 'olivia', 'avinash'].map(person => (
-                <div className="scale-width-tablet fill-height" key={`${person}`}>
-                  <div className="relative overflow-hidden">
-                    {getImage(`${person}-bg`, userToBg[person], 'fill-width pad-right-s')}
-                    {getImage(`${person}`, userToImg[person], 'fill-width overlay')}
-                    <div className="overlay scale-hide-full-screen scale-hover-disable-full-screen hover-show fill-width fill-height">
-                      <div className="pad-top-l pad-bottom-xxl pad-sides-m hover-description flex dir-col jc-center fill-height">{userToText[person]}</div>
-                    </div>
-                  </div>
-                  <div className="scale-show-full-screen pad-top-m pad-bottom-xxl flex dir-col jc-center">{userToText[person]}</div>
-                </div>
-              ))
-            }
           </div>
         </div>
 
