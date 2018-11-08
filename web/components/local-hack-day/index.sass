@@ -2,19 +2,10 @@ $spacing-section: 80px // padding between each section
 
 body
   overflow-x: hidden
-.homepage
+.lhd
   background: $gradient-purple
   .pad-bottom-section
     padding-bottom: $spacing-section
-
-  .mlh-trust-badge
-    display: block
-    max-width: 100px
-    min-width: 60px
-    position: absolute
-    right: 100px
-    top: 64px
-    width: 10%
   
   &-email-registration
     @media screen and (max-width: $mobile-s)
@@ -26,15 +17,24 @@ body
       width: 100%
       max-width: 300px
 
-  &-main-panel
-    padding-top: 166px
-    padding-left: 152px
-    p
-      &.primary
-      margin-top: -10px
-      &.secondary
-        margin-top: 0
-        
+  .first-panel
+    padding-top: 64px
+    display: block
+    overflow-y: auto
+    overflow-x: hidden
+    z-index: 0
+    .scenery
+      &-desktop
+        z-index: -1
+        display: inline
+        @media screen and (max-width: $tablet)
+          display: none
+      &-mobile
+        z-index: -1
+        display: none
+        @media screen and (max-width: $tablet)
+          display: inline
+   
   &-skyline
     margin-bottom: -$spacing-tera
     @media screen and (max-width: $desktop)

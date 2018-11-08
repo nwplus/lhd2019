@@ -2,21 +2,17 @@ import React from 'react';
 import { SECTION } from './Sections';
 import { QUESTIONS } from './Questions';
 import { EXTERNAL } from './External';
-import { TextInput } from '../input/text';
-import { PrimaryButton } from '../input/buttons';
+// import { TextInput } from '../input/text';
+// import { PrimaryButton } from '../input/buttons';
 import { ShowHideTextView } from '../view';
 import { Footer } from '../footer';
 
 // MLH ribbon
 import mlhblueribbon from '../../assets/mlh-blue-ribbon.svg';
 
-
-import sun from '../../assets/sun.svg';
-
-import skyline from '../../assets/skyline.svg';
-
-import panelBear from '../../assets/panel-bear.svg';
-import panelTrain from '../../assets/panel-train.svg';
+// first panel
+import firstPanelDesktop from '../../assets/local-hack-day/first-panel/scenery-desktop.svg';
+import firstPanelMobile from '../../assets/local-hack-day/first-panel/scenery-mobile.svg';
 
 import bearCircle from '../../assets/bear-circle.svg';
 
@@ -77,95 +73,11 @@ class LocalHackDay extends React.Component {
 
   render() {
     return (
-      <div className="homepage overflow-hidden flex jc-center ai-center dir-col">
-        <a className="mlh-trust-badge scale-hide-phablet" href={EXTERNAL.MLH_UPCOMINGHACKATHON_LINK} target="_blank" rel="noopener noreferrer">
-          <img className="fill-width" src={mlhblueribbon} alt="Major League Hacking 2019 Hackathon Season" />
-        </a>
-        <div
-          className="homepage-main-panel flex jc-between ai-center pad-top-peta pad-sides-peta pad-bottom-l scale-pad-sides-tablet homepage-scale-top container-width">
-          <div>
-            <h1 className="scale-h1-tablet pad-bottom-s">nwHacks 2019</h1>
-            <p className="primary">
-              Western Canada&apos;s largest hackathon<br />
-              January 26-27, 2019 @ the University of British Columbia
-            </p>
-            <p className="secondary">
-              Get notified when registration opens!
-            </p>
-            <form
-              className="homepage-email-registration flex ai-end pad-bottom-s"
-              action={EXTERNAL.MAILCHIMP_FORM}
-              method="post">
-              <TextInput
-                name="EMAIL"
-                placeholder="hacker@email.com"
-                onChange={() => { }} />
-              <PrimaryButton
-                text="Submit"
-                type="submit" />
-            </form>
-            <p className="secondary">
-              <a href={EXTERNAL.SPONSORSHIP_PACKAGE}>
-                Interested in sponsoring?
-              </a>
-            </p>
-          </div>
-          <div className="margin-left-mega margin-bottom-l pad-right-l scale-hide-laptop">
-            {getImage('sun', sun)}
-          </div>
-        </div>
+      <div className="lhd">
 
-        <div className="homepage-skyline fill-width">
-          {getImage('skyline', skyline)}
-        </div>
-
-        <div className="row-intro">
-          <div
-            ref={node => this.aboutDiv = node}
-            className={`${ROW_STYLE} row-image-and-desc flex jc-between scale-jc-tablet ai-center dir-row split scale-row-tablet`}>
-            <div className="scale-width-tablet">
-              <h2>This is nwHacks 2019</h2>
-              <p>
-                Come make things and break things, and then make them cooler. You&apos;ll
-                never be short on inspiration when you’re surrounded by 650 of the
-                brightest minds in the Pacific Northwest. All you need to bring is an
-                open mind and an insatiable desire to learn; we’ll take care of the
-                rest. After all, we&apos;re western Canada’s largest hackathon — we make
-                the west coast the best coast.
-              </p>
-            </div>
-            <div className="scale-width-tablet flex jc-center">
-              <div className="large-svg pad-left-giga pad-ends-l scale-pad-sides-tablet-none">
-                {getImage('bear', panelBear, 'scale-width-phablet')}
-              </div>
-            </div>
-          </div>
-
-          <div className={`${ROW_STYLE} row-image-and-desc flex jc-between scale-jc-tablet ai-center dir-row split scale-row-tablet-rev`}>
-            <div className="scale-width-tablet flex jc-center">
-              <div className="large-svg pad-right-giga pad-ends-l scale-pad-sides-tablet-none">
-                {getImage('train', panelTrain, 'scale-width-phablet')}
-              </div>
-            </div>
-            <div className="scale-width-tablet">
-              <h2>Why nwHacks?</h2>
-              <p>
-                Vancouver is more than its breathtaking scenery, coastal lifestyle,
-                and diverse food options. It is also increasingly present in global
-                conversations surrounding the critical impact of youth and industrial
-                advancement. The home of nwHacks is a hub of learning opportunities,
-                community support, and connections to the tech industry.
-              </p>
-              <p>
-                We&apos;re growing and we invite you to be a part of our journey.
-              </p>
-              <p>
-                nwHacks is dedicated to supporting the thriving community of technology
-                lovers in the Pacific Northwest region by bringing together ambitious
-                minds for an epic two day event.
-              </p>
-            </div>
-          </div>
+        <div className="first-panel">
+          <img className="scenery-desktop fill-width" alt="illustration" src={firstPanelDesktop} />
+          <img className="scenery-mobile fill-width" alt="illustration" src={firstPanelMobile} />
         </div>
 
         <div ref={node => this.faqDiv = node} className={`${ROW_STYLE}`}>
