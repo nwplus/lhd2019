@@ -1,14 +1,9 @@
 import React from 'react';
 import { SECTION } from './Sections';
 import { QUESTIONS } from './Questions';
-import { EXTERNAL } from './External';
-// import { TextInput } from '../input/text';
 import { PrimaryButton } from '../input/buttons';
 import { ShowHideTextView } from '../view';
 import { Footer } from '../footer';
-
-// MLH ribbon
-import mlhblueribbon from '../../assets/mlh-blue-ribbon.svg';
 
 // first panel
 import firstPanelDesktop from '../../assets/local-hack-day/first-panel/scenery-desktop.svg';
