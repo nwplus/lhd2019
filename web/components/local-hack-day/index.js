@@ -3,7 +3,7 @@ import { SECTION } from './Sections';
 import { QUESTIONS } from './Questions';
 import { EXTERNAL } from './External';
 // import { TextInput } from '../input/text';
-// import { PrimaryButton } from '../input/buttons';
+import { PrimaryButton } from '../input/buttons';
 import { ShowHideTextView } from '../view';
 import { Footer } from '../footer';
 
@@ -15,6 +15,8 @@ import firstPanelDesktop from '../../assets/local-hack-day/first-panel/scenery-d
 import firstPanelMobile from '../../assets/local-hack-day/first-panel/scenery-mobile.svg';
 
 import bearCircle from '../../assets/bear-circle.svg';
+
+const lhdUrl = 'https://localhackday.mlh.io/lhd-2018/events/33-nwplus-at-the-university-of-british-columbia';
 
 const getImage = (alt, src, className = '') => (
   <img
@@ -75,44 +77,47 @@ class LocalHackDay extends React.Component {
     return (
       <div className="lhd">
 
-        <div className="first-panel">
+        <div className="first-panel margin-bottom-m">
           <img className="scenery-desktop fill-width" alt="illustration" src={firstPanelDesktop} />
           <img className="scenery-mobile fill-width" alt="illustration" src={firstPanelMobile} />
         </div>
+        <a href={lhdUrl} target="_blank" rel="noopener noreferrer"><PrimaryButton text="Register" className="register-button" /></a>
 
-        <div ref={node => this.faqDiv = node} className={`${ROW_STYLE}`}>
-          <h2 className="fill-width margin-bottom-s">Frequently asked questions</h2>
-          <div className="flex jc-start faq scale-row-desktop">
-            <div className="flex jc-between dir-row margin-right-s">
-              <div className="scale-width-desktop fill-width" key={`${'general'}`}>
-                <div className="relative overflow-hidden">
-                  {getFaqSection('general')}
+        <div className="overflow-hidden flex jc-center ai-center dir-col">
+          <div ref={node => this.faqDiv = node} className={`${ROW_STYLE}`}>
+            <h2 className="fill-width margin-bottom-s">Frequently asked questions</h2>
+            <div className="flex jc-start faq scale-row-desktop">
+              <div className="flex jc-between dir-row margin-right-s">
+                <div className="scale-width-desktop fill-width" key={`${'general'}`}>
+                  <div className="relative overflow-hidden">
+                    {getFaqSection('general')}
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="flex jc-start dir-col margin-left-s">
-              {
-                ['teams_and_projects', 'logistics'].map(section => (
-                  <div className="scale-width-desktop jc-start fill-width" key={`${section}`}>
-                    <div className="relative overflow-hidden">
-                      {getFaqSection(section)}
+              <div className="flex jc-start dir-col margin-left-s">
+                {
+                  ['teams_and_projects', 'logistics'].map(section => (
+                    <div className="scale-width-desktop jc-start fill-width" key={`${section}`}>
+                      <div className="relative overflow-hidden">
+                        {getFaqSection(section)}
+                      </div>
                     </div>
-                  </div>
-                ))
-              }
+                  ))
+                }
+              </div>
             </div>
+            <p className="fill-min-width margin-top-s">Still have questions? Feel free to email us at <a href="mailto:hello@nwplus.io">hello@nwplus.io</a> or shoot us a message on <a href="https://facebook.com/nwhacks">Facebook</a>.</p>
           </div>
-          <p className="fill-min-width margin-top-s">Still have questions? Feel free to email us at <a href="mailto:hello@nwplus.io">hello@nwplus.io</a> or shoot us a message on <a href="https://facebook.com/nwhacks">Facebook</a>.</p>
-        </div>
 
-        <div className="sponsors flex jc-center dir-col pad-top-tera">
-          {getImage('cute-bear', bearCircle)}
-          <p className="primary flex jc-center text-center">
-            Stay tuned for sponsor updates!
-          </p>
-        </div>
+          <div className="sponsors flex jc-center dir-col pad-top-tera">
+            {getImage('cute-bear', bearCircle)}
+            <p className="primary flex jc-center text-center">
+              Stay tuned for sponsor updates!
+            </p>
+          </div>
 
-        <Footer />
+          <Footer />
+        </div>
 
       </div>
     );
