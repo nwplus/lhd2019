@@ -38,55 +38,86 @@ footer
         color: $white
 
   .scale-scenery
-    .left-trees, .bear, .right-trees
+    .left-scenery, .bike, .bike-mobile, .right-scenery, .right-scenery-mobile, .right-scenery-lhd, .right-scenery-lhd-mobile
       position: absolute
-    .left-trees
-      height: 136px
-      top: -111.89px
+    .left-scenery
+      height: 170px
+      top: -145px
       left: -6px
-    .bear
-      height: 100.48px
-      top: -49.5px
-      left: 108.58px
-    .right-trees
-      height: 151px
-      top: -137px
-      right: 10px
-    @media (min-width: $mobile)
-      .left-trees
-        height: 170px
-        top: -139.77px
-        left: -6px
-      .bear
+    .bike
+      display: none
+      &-mobile
         height: 125.6px
         top: -61.875px
         left: 135.725px
-      .right-trees
+    .right-scenery
+      display: none
+      &-mobile
         height: 188.75px
         top: -171.25px
         right: 10px
+    .right-scenery-lhd
+      display: none
+      &-mobile
+        height: 188.75px
+        top: -171.25px
+        right: 10px
+    @media (min-width: $phablet) // handles hiding mobile components and showing desktop components
+      .bike
+        display: inline
+        &-mobile
+          display: none
+      .right-scenery-lhd
+        display: inline
+        &-mobile
+          display: none
+      .right-scenery
+        display: inline
+        &-mobile
+          display: none
     @media (min-width: $phablet)
-      .left-trees
-        height: 272px
-        top: -223.8px
-      .bear
+      .bike
         height: 200.96px
         top: -98.7px
         left: 217.16px
-      .right-trees
+      .right-scenery
+        height: 302px
+        top: -274px
+        right: 40px
+      .right-scenery-lhd
         height: 302px
         top: -274px
         right: 40px
     @media (min-width: $laptop)
-      .left-trees
-        height: 489px
-        top: -401.8px
-      .bear
+      .left-scenery
+        height: 599px
+        top: -512px
+      .bike
         height: 225.24px
         top: -110.9px
         left: 424px
-      .right-trees
-        height: 541.06px
-        top: -492px
-        right: 93px
+      .right-scenery
+        height: 268px
+        top: -210px
+        right: 122px
+      .right-scenery-lhd
+        height: 268px
+        top: -210px
+        right: 122px
+    @media (min-width: 1400px)
+      .left-scenery
+        height: 599px
+        top: -512px
+      .bike
+        height: 225.24px
+        top: -110.9px
+        left: 424px
+      .right-scenery
+        height: 268px
+        top: -210px
+        right: 122px
+      .right-scenery-lhd
+        height: 268px
+        top: -210px
+        right: 122px
 

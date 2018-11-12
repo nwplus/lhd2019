@@ -1,9 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { EXTERNAL } from '../home/External';
 
-import bear from '../../assets/footer/scenery/bear.svg';
-import mobileRightTrees from '../../assets/footer/scenery/right-trees.svg';
-import mobileLeftTrees from '../../assets/footer/scenery/left-trees.svg';
+import leftScenery from '../../assets/footer/scenery/left-scenery.svg';
+import bike from '../../assets/footer/scenery/bike.svg';
+import bikeMobile from '../../assets/footer/scenery/bike-mobile.svg';
+import rightScenery from '../../assets/footer/scenery/right-scenery.svg';
+import rightSceneryMobile from '../../assets/footer/scenery/right-scenery-mobile.svg';
+import rightSceneryLHD from '../../assets/footer/scenery/right-scenery-lhd.svg';
+import rightSceneryLHDMobile from '../../assets/footer/scenery/right-scenery-lhd-mobile.svg';
 
 import facebookIcon from '../../assets/footer/icons/facebook.svg';
 import instagramIcon from '../../assets/footer/icons/instagram.svg';
@@ -46,12 +51,18 @@ const getIcon = obj => (
   </a>
 );
 
-const Footer = () => (
+const Footer = ({ type }) => (
   <footer className="footer fill-width">
     <div className="scale-scenery">
-      {getImage('trees', mobileLeftTrees, 'left-trees')}
-      {getImage('bear', bear, 'bear')}
-      {getImage('trees', mobileRightTrees, 'right-trees')}
+      {getImage('left-scenery', leftScenery, 'left-scenery')}
+      {getImage('bike', bike, 'bike')}
+      {getImage('bike-mobile', bikeMobile, 'bike-mobile')}
+      {(type === 'LHD')
+        ? getImage('right-scenery-lhd', rightSceneryLHD, 'right-scenery-lhd')
+        : getImage('right-scenery', rightScenery, 'right-scenery')}
+      {(type === 'LHD')
+        ? getImage('right-scenery-lhd-mobile', rightSceneryLHDMobile, 'right-scenery-lhd-mobile')
+        : getImage('right-scenery-mobile', rightSceneryMobile, 'right-scenery-mobile')}
     </div>
     <div className="footer-content">
       <div className="social flex dir-row jc-between pad-top-l">
@@ -73,5 +84,9 @@ const Footer = () => (
     </div>
   </footer>
 );
+
+Footer.propTypes = {
+  type: PropTypes.string,
+};
 
 export { Footer };
