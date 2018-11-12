@@ -16,26 +16,45 @@ import mediumIcon from '../../assets/footer/icons/medium.svg';
 import twitterIcon from '../../assets/footer/icons/twitter.svg';
 
 const social = {
-  facebook: {
-    alt: 'facebook',
-    src: facebookIcon,
-    href: EXTERNAL.FACEBOOK,
-  },
-  instagram: {
-    alt: 'instagram',
-    src: instagramIcon,
-    href: EXTERNAL.INSTAGRAM,
-  },
-  medium: {
-    alt: 'medium',
-    src: mediumIcon,
-    href: EXTERNAL.MEDIUM,
-  },
-  twitter: {
-    alt: 'twitter',
-    src: twitterIcon,
-    href: EXTERNAL.TWITTER,
-  },
+  nwplus: [
+    {
+      alt: 'facebook',
+      src: facebookIcon,
+      href: EXTERNAL.FACEBOOK,
+    },
+    {
+      alt: 'instagram',
+      src: instagramIcon,
+      href: EXTERNAL.INSTAGRAM,
+    },
+    {
+      alt: 'medium',
+      src: mediumIcon,
+      href: EXTERNAL.MEDIUM,
+    },
+    {
+      alt: 'twitter',
+      src: twitterIcon,
+      href: EXTERNAL.TWITTER,
+    },
+  ],
+  lhd: [
+    {
+      alt: 'facebook',
+      src: facebookIcon,
+      href: EXTERNAL.FACEBOOK,
+    },
+    {
+      alt: 'instagram',
+      src: instagramIcon,
+      href: EXTERNAL.INSTAGRAM,
+    },
+    {
+      alt: 'twitter',
+      src: twitterIcon,
+      href: EXTERNAL.TWITTER,
+    },
+  ],
 };
 
 const getImage = (alt, src, className) => (
@@ -45,11 +64,16 @@ const getImage = (alt, src, className) => (
     src={src} />
 );
 
-const getIcon = obj => (
-  <a href={obj.href}>
-    {getImage(obj.alt, obj.src, obj.className)}
-  </a>
-);
+const getIcon = (obj) => {
+  if (obj) {
+    return (
+      <a href={obj.href}>
+        {getImage(obj.alt, obj.src, obj.className)}
+      </a>
+    );
+  }
+  return (null);
+};
 
 const Footer = ({ type }) => (
   <footer className="footer fill-width">
@@ -57,19 +81,16 @@ const Footer = ({ type }) => (
       {getImage('left-scenery', leftScenery, 'left-scenery')}
       {getImage('bike', bike, 'bike')}
       {getImage('bike-mobile', bikeMobile, 'bike-mobile')}
-      {(type === 'LHD')
+      {(type === 'lhd')
         ? getImage('right-scenery-lhd', rightSceneryLHD, 'right-scenery-lhd')
         : getImage('right-scenery', rightScenery, 'right-scenery')}
-      {(type === 'LHD')
+      {(type === 'lhd')
         ? getImage('right-scenery-lhd-mobile', rightSceneryLHDMobile, 'right-scenery-lhd-mobile')
         : getImage('right-scenery-mobile', rightSceneryMobile, 'right-scenery-mobile')}
     </div>
     <div className="footer-content">
-      <div className="social flex dir-row jc-between pad-top-l">
-        {getIcon(social.facebook)}
-        {getIcon(social.instagram)}
-        {getIcon(social.medium)}
-        {getIcon(social.twitter)}
+      <div className="social flex dir-row jc-between">
+        {social[type].map(icon => getIcon(icon))}
       </div>
       <div className="links flex jc-between pad-ends-l">
         <a href={EXTERNAL.EMAIL_US}>E-mail Us</a>
