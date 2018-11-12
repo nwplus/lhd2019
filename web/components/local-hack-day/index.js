@@ -111,7 +111,7 @@ class LocalHackDay extends React.Component {
             </p>
           </div>
 
-          <Footer type="LHD" />
+          <Footer type="lhd" />
         </div>
 
       </div>
