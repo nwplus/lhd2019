@@ -83,22 +83,29 @@ class LocalHackDay extends React.Component {
         </div>
         <a href={lhdUrl} target="_blank" rel="noopener noreferrer"><PrimaryButton text="Register" className="register-button" /></a>
 
-        <div className="second-panel flex dir-row jc-between pad-bottom-mega pad-top-m pad-sides-mega scale-pad-sides-laptop-none scale-row-tablet">
-            <div className="flex ai-center dir-col pad-sides-giga scale-pad-sides-laptop scale-width-tablet">
-              <img className="pad-top-xl" alt="illustration" src={secondPanelLearn} />
-              <h4>Learn</h4>
-              <p className="text-align-center">Whether you're a hackathon veteran, or a first-timer, you'll learn lots from our brilliant mentors, workshops and fellow attendees.</p>
-            </div>
-            <div className="flex ai-center dir-col pad-sides-giga scale-pad-sides-laptop scale-width-tablet">
-              <img className="pad-top-xl" alt="illustration" src={secondPanelBuild} />
-              <h4>Build</h4>
-              <p className="text-align-center">Build your passion project while contributing to building an inclusive, diverse and accessible local tech community. Feel free to work on anything you're interested in!</p>
-            </div>
-            <div className="flex ai-center dir-col pad-sides-giga scale-pad-sides-laptop scale-width-tablet">
-              <img className="pad-top-xl" alt="illustration" src={secondPanelShare} />
-              <h4>Share</h4>
-              <p className="text-align-center">Share your ideas and knowledge! But most importantly, share hackathon moments and memories that will last a lifetime.</p>
-            </div>
+        <div className="second-panel flex dir-row jc-between pad-bottom-mega pad-top-m pad-sides-mega scale-pad-sides-laptop-none scale-row-tablet text-align-center">
+          <div className="flex ai-center dir-col pad-sides-giga scale-pad-sides-laptop scale-width-tablet">
+            <img className="pad-top-xl" alt="illustration" src={secondPanelLearn} />
+            <h4>Learn</h4>
+            <p>Whether you&apos;re a hackathon veteran, or a first-timer,
+              you&apos;ll learn lots from our brilliant mentors, workshops and fellow attendees.
+            </p>
+          </div>
+          <div className="flex ai-center dir-col pad-sides-giga scale-pad-sides-laptop scale-width-tablet">
+            <img className="pad-top-xl" alt="illustration" src={secondPanelBuild} />
+            <h4>Build</h4>
+            <p>Build your passion project while contributing to building an inclusive,
+              diverse and accessible local tech community. Feel free to work on anything
+              you&apos;re interested in!
+            </p>
+          </div>
+          <div className="flex ai-center dir-col pad-sides-giga scale-pad-sides-laptop scale-width-tablet">
+            <img className="pad-top-xl" alt="illustration" src={secondPanelShare} />
+            <h4>Share</h4>
+            <p>Share your ideas and knowledge! But most importantly, share hackathon moments and
+              memories that will last a lifetime.
+            </p>
+          </div>
         </div>
 
 
