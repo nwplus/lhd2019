@@ -76,7 +76,7 @@ class LocalHackDay extends React.Component {
           <img className="scenery-desktop fill-width" alt="illustration" src={firstPanelDesktop} />
           <img className="scenery-mobile fill-width" alt="illustration" src={firstPanelMobile} />
         </div>
-        <a href={lhdUrl} target="_blank" rel="noopener noreferrer"><PrimaryButton text="Register" className="register-button" /></a>
+        <PrimaryButton text="Register" className="register-button" onClick={() => (window.open(lhdUrl))} />
 
         <div className="overflow-hidden flex jc-center ai-center dir-col">
           <div ref={node => this.faqDiv = node} className={`${ROW_STYLE}`}>
