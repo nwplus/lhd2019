@@ -42,17 +42,47 @@ const social = {
     {
       alt: 'facebook',
       src: facebookIcon,
-      href: EXTERNAL.FACEBOOK,
+      href: EXTERNAL.LHD.FACEBOOK,
     },
     {
       alt: 'instagram',
       src: instagramIcon,
-      href: EXTERNAL.INSTAGRAM,
+      href: EXTERNAL.LHD.INSTAGRAM,
     },
     {
       alt: 'twitter',
       src: twitterIcon,
-      href: EXTERNAL.TWITTER,
+      href: EXTERNAL.LHD.TWITTER,
+    },
+  ],
+};
+const links = {
+  nwplus: [
+    {
+      href: EXTERNAL.EMAIL_US,
+      text: 'E-mail Us',
+    },
+    {
+      href: EXTERNAL.CODE_OF_CONDUCT,
+      text: 'Code Of Conduct',
+    },
+    {
+      href: EXTERNAL.SPONSORSHIP_PACKAGE,
+      text: 'Become a Sponsor',
+    },
+  ],
+  lhd: [
+    {
+      href: EXTERNAL.EMAIL_US,
+      text: 'E-mail Us',
+    },
+    {
+      href: EXTERNAL.CODE_OF_CONDUCT,
+      text: 'Code Of Conduct',
+    },
+    {
+      href: EXTERNAL.LHD.SPONSORSHIP_PACKAGE,
+      text: 'Become a Sponsor',
     },
   ],
 };
@@ -64,16 +94,15 @@ const getImage = (alt, src, className) => (
     src={src} />
 );
 
-const getIcon = (obj) => {
-  if (obj) {
-    return (
-      <a href={obj.href}>
-        {getImage(obj.alt, obj.src, obj.className)}
-      </a>
-    );
-  }
-  return (null);
-};
+const getIcon = icon => (
+  <a href={icon.href}>
+    {getImage(icon.alt, icon.src, icon.className)}
+  </a>
+);
+
+const getLink = link => (
+  <a href={link.href}>{link.text}</a>
+);
 
 const Footer = ({ type }) => (
   <footer className="footer fill-width">
@@ -93,9 +122,7 @@ const Footer = ({ type }) => (
         {social[type].map(icon => getIcon(icon))}
       </div>
       <div className="links flex jc-between pad-ends-l">
-        <a href={EXTERNAL.EMAIL_US}>E-mail Us</a>
-        <a href={EXTERNAL.CODE_OF_CONDUCT}>Code of Conduct</a>
-        <a href={EXTERNAL.SPONSORSHIP_PACKAGE}>Become a Sponsor</a>
+        {links[type].map(link => getLink(link))}
       </div>
       <div className="footnote pad-bot-l">
         <p>Organized and held by nwPlus
