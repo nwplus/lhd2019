@@ -9,7 +9,8 @@ import { Footer } from '../footer';
 import firstPanelDesktop from '../../assets/local-hack-day/first-panel/scenery-desktop.svg';
 import firstPanelMobile from '../../assets/local-hack-day/first-panel/scenery-mobile.svg';
 
-import bearCircle from '../../assets/bear-circle.svg';
+import bearCircle from '../../assets/bear-circle-LHD.svg';
+
 
 const lhdUrl = 'https://localhackday.mlh.io/lhd-2018/events/33-nwplus-at-the-university-of-british-columbia';
 
