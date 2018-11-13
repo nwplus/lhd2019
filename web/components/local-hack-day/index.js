@@ -83,7 +83,7 @@ class LocalHackDay extends React.Component {
           <PrimaryButton text="Register" className="register-button" onClick={() => (window.open(lhdUrl))} />
         </div>
 
-        <div className="second-panel flex dir-row jc-between pad-bottom-mega pad-top-m pad-sides-mega scale-pad-sides-laptop-none scale-row-tablet text-align-center">
+        <div className="second-panel flex dir-row jc-between pad-bottom-mega pad-sides-mega scale-pad-sides-laptop-none scale-row-tablet text-align-center">
           <div className="flex dir-col pad-sides-giga scale-pad-sides-laptop scale-width-tablet" style={{ width: '32%' }}>
             <img className="pad-top-xl" alt="illustration" src={secondPanelLearn} />
             <h4>Learn</h4>
