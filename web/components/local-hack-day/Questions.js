@@ -12,75 +12,57 @@ export const QUESTIONS = Object.freeze({
       </div>
     ),
     questions: [{
-      'What is a hackathon?': (
+      'What is Local Hack Day?': (
         <div>
           <p className="margin-top-none">
-            A hackathon is an event where teams collaborate on a project or &quot;hack&quot; within
-            a tight time limit. At nwHacks, teams of 2-4 collaborate over 24 hours to
-            challenge the status quo, fulfill prize challenges, and create meaningful impact.
-            Industry professionals from the local community mentor at hackathons to share their
-            experiences, support projects from a technical perspective, and meet the younger
-            generation of hackers. The winners will be chosen by a panel of judges comprised
-            of top industry professionals.
+            A local hack day is a beginners friendly hackathon that brings
+            students together to build cool tech-related projects over 12 hours.
           </p>
         </div>
       ),
     },
     {
       'How can I officially sign up?': (
-        <p className="margin-top-none">Registration on our website will open in November.&nbsp;
-          <a href="http://eepurl.com/dF3b7n">
-            Let us know your email and we&apos;ll tell you once it does!
-          </a>
+        <p className="margin-top-none">Hacker applications are open now, you can click &quot;Register&quot;
+        above to access the application.
         </p>
       ),
     },
     {
       'How much does it cost?': (
         <p className="margin-top-none">
-          nwHacks is <b>100% free</b> for all participants. However, registration is
-          strictly limited to high school and university students, and recent graduates only.
-          A bus will be sent to the University of Washington for attendees from Seattle and
-          the surrounding area. For other hackers, we will be offering a limited number
-          of travel reimbursements of up to $200 per person (economy flights only).
+          Nothing. Attending UBC&apos;s Local Hack Day is completely free!
         </p>
       ),
     },
     {
-      'Is there a theme for nwHacks?': (
+      'Who can participate in this hackathon?': (
         <p className="margin-top-none">
-          At nwHacks, we love seeing the variety of projects inspired by the countless areas of
-          tech that teams want to explore. We do not have a specific theme but there may be
-          sponsored prizes with specific qualifying criteria.
+          We welcome all students and recent graduates to join us!
+          All participants must follow the {
+            <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">
+              MLH Code of Conduct.
+            </a>}
         </p>
       ),
     },
     {
-      "What if I don't have any experience?": (
+      'Where is the event?': (
         <div>
           <p className="margin-top-none">
-            {/* Marked as "to be edited" on Notion" */}
-            Have no fear! Hackathons are really a place for learning and one of the best ways
-            to do so. We&apos;ll have series of workshops to bootstrap you for hacking. And when
-            you run into any problems or questions, mentors will be happy to help you out.
-            By the time you walk out, you will have new skills, friends, and a project
-            under your belt!
-          </p>
-          <p>
-            On the first day of nwHacks, we will also facilitate team building so no one gets
-            left out! There will be opportunities to connect with people and form teams before
-            the event in-person and online.
+            UBC Local Hack Day 2018 will be held in Hugh Dempster Pavilion
+            (DMP 301) at the University of British Columbia, Vancouver on December 1st, 2018.
           </p>
         </div>
       ),
     },
     {
-      "I'm a designer/graduate/rad human! Can I attend?": (
+      'What if I have never been to a hackathon before?': (
         <p className="margin-top-none">
-          We are excited to invite 650 people to nwHacks including high school and
-          university students from all faculties! Great projects are more than just
-          their code. New graduates are welcome as long as your graduation date is
-          within one year of January 2019.
+          Don&apos;t worry! Having programming experience is not a requirement for this event.
+          We will have workshops and mentors readily available to help
+          students of all technical skill
+          levels to kickstart their project.
         </p>
       ),
     },
@@ -101,15 +83,12 @@ export const QUESTIONS = Object.freeze({
     ),
     questions: [
       {
-        'How big can my team be?': (
+        'How do teams work?': (
           <p className="margin-top-none">
-            {/* Marked as "check wording" on Notion" */}
-            Teams are usually 2-4 people in size.
-            Teams bigger than 4 people are usually split up into smaller ones,
-            as we&apos;ve found large teams aren&apos;t the best solution for
-            a 24h event. Don&apos;t worry if you can&apos;t find your team
-            beforehand, staff at the event will help you find other
-            teammates and provide you with many opportunities to find others!
+            Feel free to hack solo or in up to teams of 4.
+            (You can hack in more than teams of 4. But if you win, the prizes are
+            only meant to be for up to 4 students, so you will have to divide them
+            up accordingly on your own)
           </p>
         ),
       },
@@ -118,7 +97,7 @@ export const QUESTIONS = Object.freeze({
           <p className="margin-top-none">
             Don&apos;t worry!
             A lot of hackers just like you are in the same position.
-            On the first day of the event, we will make sure to pair everyone up with a team
+            On the day of the event, we will make sure to pair everyone up with a team
             of hackers so no one gets left out! There will also be an opportunity to connect
             with people and form teams before the event (after you have been chosen to attend).
           </p>
@@ -147,10 +126,9 @@ export const QUESTIONS = Object.freeze({
       {
         'What should I bring?': (
           <p className="margin-top-none">
-            nwHacks is a 24h event, which means that hackers should be prepared
-            to sleep overnight at the venue. Be sure to bring everything you need
-            to stay the night, including a sleeping bag! All food will be provided
-            at event so don&apos;t worry about that!
+            You must bring a valid student or government issued ID card for check ins.
+            Also, bring your laptop, charging cables, any hardware that you plan to
+            hack with (if any), and we will provide the rest!
           </p>
         ),
       },
@@ -162,18 +140,11 @@ export const QUESTIONS = Object.freeze({
       //   ),
       // },
       {
-        'How do I get to nwHacks?': (
-          <div>
-            <p className="margin-top-none">
-              If you are coming from afar, we will be offering a limited number of
-              travel reimbursements up to $200 per person. We also recommend
-              applying for travel subsidies with your university or local government.
-            </p>
-            <p>
-              For attendees from Seattle and the surrounding area, we will have
-              buses to and from the University of Washington.
-            </p>
-          </div>
+        'Is travel reimbursement being offered?': (
+          <p className="margin-top-none">
+            We do not offer travel reimbursements at the moment, but
+            we will take good care of you if you can make your way here!
+          </p>
         ),
       },
     ],
