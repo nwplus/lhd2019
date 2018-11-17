@@ -75,7 +75,7 @@ class LocalHackDay extends React.Component {
           <PrimaryButton text="Register" className="register-button" onClick={() => (window.open(lhdUrl))} />
         </div>
 
-        <div className="second-panel flex dir-row jc-between pad-bottom-mega pad-sides-mega scale-pad-sides-laptop-none scale-row-tablet text-align-center">
+        <div className="second-panel section flex dir-row jc-between pad-bottom-mega pad-sides-mega scale-pad-sides-laptop-none scale-row-tablet text-align-center">
           <div className="flex dir-col pad-sides-giga scale-pad-sides-desktop scale-width-tablet" style={{ width: '32%' }}>
             <img className="pad-top-xl" alt="illustration" src={secondPanelLearn} />
             <h4>Learn</h4>
@@ -101,7 +101,7 @@ class LocalHackDay extends React.Component {
         </div>
 
         <div className="overflow-hidden flex jc-center ai-center dir-col">
-          <div ref={node => this.faqDiv = node} className={`${ROW_STYLE}`}>
+          <div ref={node => this.faqDiv = node} className={`${ROW_STYLE} section`}>
             <h2 className="fill-width margin-bottom-s">Frequently asked questions</h2>
             <div className="flex jc-start faq scale-row-desktop">
               <div className="flex jc-between dir-row margin-right-s">
