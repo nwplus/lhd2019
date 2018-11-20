@@ -15,8 +15,8 @@ export const QUESTIONS = Object.freeze({
       'What is Local Hack Day?': (
         <div>
           <p className="margin-top-none">
-            A local hack day is a beginners friendly hackathon that brings
-            students together to build cool tech-related projects over 12 hours.
+            Local Hack Day is a 12-hour beginner-friendly hackathon, bringing together students
+            passionate about technology to build cool projects together!
           </p>
         </div>
       ),
@@ -31,18 +31,31 @@ export const QUESTIONS = Object.freeze({
     {
       'How much does it cost?': (
         <p className="margin-top-none">
-          Nothing. Attending UBC&apos;s Local Hack Day is completely free!
+          Nothing! Attending UBC Local Hack Day is entirely free.
         </p>
       ),
     },
     {
       'Who can participate in this hackathon?': (
         <p className="margin-top-none">
-          We welcome all students and recent graduates to join us!
-          All participants must follow the {
-            <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">
-              MLH Code of Conduct.
-            </a>}
+          We welcome all students with any technical background and knowledge to join us for
+          this event! We encourage teams to be formed with participants with a varied skillset
+          to learn more from a variety of team roles.
+        </p>
+      ),
+    },
+    {
+      'Is Local Hack Day open to all schools and majors?': (
+        <p className="margin-top-none">
+          Yes! All students are welcome to attend!
+        </p>
+      ),
+    },
+    {
+      'How do I get to the event?': (
+        <p className="margin-top-none">
+          We don&apos;t currently offer travel reimbursements, but
+          we&apos;ll take good care of you if you can make your way here!
         </p>
       ),
     },
@@ -50,8 +63,9 @@ export const QUESTIONS = Object.freeze({
       'Where is the event?': (
         <div>
           <p className="margin-top-none">
-            UBC Local Hack Day 2018 will be held in Hugh Dempster Pavilion
-            (DMP 301) at the University of British Columbia, Vancouver on December 1st, 2018.
+            UBC Local Hack Day 2018 will be held in the Hugh Dempster Pavilion
+            (DMP 301) at the University of British Columbia, in Vancouver,
+            Canada on December 1st, 2018.
           </p>
         </div>
       ),
@@ -59,10 +73,10 @@ export const QUESTIONS = Object.freeze({
     {
       'What if I have never been to a hackathon before?': (
         <p className="margin-top-none">
-          Don&apos;t worry! Having programming experience is not a requirement for this event.
-          We will have workshops and mentors readily available to help
-          students of all technical skill
-          levels to kickstart their project.
+          Don&apos;t worry! The aim of Local Hack Day is ultimately to learn,
+          so having experience is not a requirement.
+          There will be workshops and mentors ready to help you out and teach you some
+          new skills that you can use for your project or for the future!
         </p>
       ),
     },
@@ -85,10 +99,11 @@ export const QUESTIONS = Object.freeze({
       {
         'How do teams work?': (
           <p className="margin-top-none">
-            Feel free to hack solo or in up to teams of 4.
-            (You can hack in more than teams of 4. But if you win, the prizes are
-            only meant to be for up to 4 students, so you will have to divide them
-            up accordingly on your own)
+            Feel free to hack solo or in groups of up to 4 people. (You can hack in larger
+            groups but if you win, the prizes are only meant for 4 people so you&apos;ll
+            have to divide them up yourselves.) Don&apos;t worry if you don&apos;t have a
+            team yet – we&apos;ll have team building activities for you to meet and learn
+            from new people!
           </p>
         ),
       },
@@ -126,9 +141,9 @@ export const QUESTIONS = Object.freeze({
       {
         'What should I bring?': (
           <p className="margin-top-none">
-            You must bring a valid student or government issued ID card for check ins.
-            Also, bring your laptop, charging cables, any hardware that you plan to
-            hack with (if any), and we will provide the rest!
+            Bring a valid student ID and government-issued ID for admission, plus a laptop
+            and charger for hacking! If you wish, you can also bring any hardware that you
+            would like to hack with.
           </p>
         ),
       },
@@ -140,10 +155,33 @@ export const QUESTIONS = Object.freeze({
       //   ),
       // },
       {
-        'Is travel reimbursement being offered?': (
+        'What will I eat?': (
           <p className="margin-top-none">
-            We do not offer travel reimbursements at the moment, but
-            we will take good care of you if you can make your way here!
+            We will be providing breakfast, lunch, and dinner, as well as snacks
+            and drinks throughout the day to keep you all comfortable as you&apos;re hacking away!
+          </p>
+        ),
+      },
+      {
+        'I registered, but can no longer attend!': (
+          <p className="margin-top-none">
+            Please let us know, so that we can open up your spot to a student on the waitlist!
+            Since we have a limited capacity, students will be placed on the waitlist, and if
+            a spot opens up, we&apos;ll reach out to a waitlisted student.
+          </p>
+        ),
+      },
+      {
+        'Registration is closed but I still really want to attend!': (
+          <p className="margin-top-none">
+            Sign up for the waitlist! If a spot opens up, we&apos;ll reach out to you!
+          </p>
+        ),
+      },
+      {
+        'I have more questions!': (
+          <p className="margin-top-none">
+            Shoot us an email at lhd (at) nwplus.io!
           </p>
         ),
       },
