@@ -41,7 +41,7 @@ const Sponsors = () => (
     <h2 className="margin-bottom-m">Sponsors</h2>
     {getSponsor('Two Tall Totems', ttt, 'https://www.twotalltotems.com/', 'title')}<br />
     {getSponsor('A Thinking Ape', atp, 'https://www.athinkingape.com/', 'monetary')}
-    {getSponsor('NextBillion', nextbillion, 'https://www.nextbillion.org/', 'monetary')}
+    {getSponsor('NextBillion', nextbillion, 'https://www.nextbillion.org/', 'monetary')}<br />
     {getSponsor('Slack', slack, 'https://slack.com/', 'monetary')}
     {getSponsor('UBC', ubc, 'https://www.cs.ubc.ca/', 'monetary ubc')}
     {getSponsor('League of Innovators', innovators, 'https://www.theleagueofinnovators.com/', 'monetary')}<br />
