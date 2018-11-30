@@ -43,7 +43,7 @@ const Sponsors = () => (
     {getSponsor('A Thinking Ape', atp, 'https://www.athinkingape.com/', 'monetary')}
     {getSponsor('NextBillion', nextbillion, 'https://www.nextbillion.org/', 'monetary')}
     {getSponsor('Slack', slack, 'https://slack.com/', 'monetary')}
-    {getSponsor('UBC', ubc, 'https://www.cs.ubc.ca/', 'monetary ubc')}<br />
+    {getSponsor('UBC', ubc, 'https://www.cs.ubc.ca/', 'monetary ubc')}
     {getSponsor('League of Innovators', innovators, 'https://www.theleagueofinnovators.com/', 'monetary')}<br />
     {getSponsor('MLH', mlh, 'https://mlh.io/', 'monetary')}
     {getSponsor('Microsoft', microsoft, 'https://www.microsoft.com/', 'monetary')}
