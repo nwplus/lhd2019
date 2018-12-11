@@ -18,7 +18,7 @@ body
       max-width: 300px
 
   .first-panel
-    background-color: $white
+    background-color: #DEEAFD
     padding-top: 64px
     display: block
     overflow-y: auto
@@ -36,16 +36,17 @@ body
         display: none
         @media screen and (max-width: $tablet)
           display: inline
-  .register-button
+  .call-to-action
     z-index: 100
     display: block
     margin-right: auto
     margin-left: auto
-    margin-top: -29px
     height: 45px
     min-width: 25%
     @media screen and (max-width: $tablet)
       min-width: 100%
+    &.register
+      margin-top: -29px
   &-skyline
     margin-bottom: -$spacing-tera
     @media screen and (max-width: $desktop)

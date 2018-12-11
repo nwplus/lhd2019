@@ -1,7 +1,8 @@
 import React from 'react';
 import { SECTION } from './Sections';
 import { QUESTIONS } from './Questions';
-import { PrimaryButton } from '../input/buttons';
+import { EXTERNAL } from './External';
+import { PrimaryButton, SecondaryButton } from '../input/buttons';
 import { ShowHideTextView } from '../view';
 import { Sponsors } from './Sponsors';
 import { Footer } from '../footer';
@@ -72,7 +73,9 @@ class LocalHackDay extends React.Component {
         <div className="first-panel">
           <img className="scenery-desktop fill-width" alt="illustration" src={firstPanelDesktop} />
           <img className="scenery-mobile fill-width" alt="illustration" src={firstPanelMobile} />
-          <PrimaryButton text="Join The Waitlist" className="register-button" onClick={() => (window.open(lhdUrl))} />
+          {/* <PrimaryButton text="Join The Waitlist" className="call-to-action register" onClick={() => (window.open(EXTERNAL.WAITLIST_FORM))} /> */}
+          <PrimaryButton text="View Hacks" className="call-to-action" onClick={() => (window.open(EXTERNAL.PROJECT_SHOWCASE))} />
+          <SecondaryButton text="View Photos" className="call-to-action margin-top-s margin-bottom-m" onClick={() => (window.open(EXTERNAL.PHOTO_ALBUM))} />
         </div>
 
         <div className="second-panel section flex dir-row jc-between pad-bottom-mega pad-sides-mega scale-pad-sides-laptop-none scale-row-tablet text-align-center">
