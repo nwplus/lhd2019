@@ -16,8 +16,6 @@ import secondPanelLearn from '../../assets/local-hack-day/second-panel/learn.svg
 import secondPanelBuild from '../../assets/local-hack-day/second-panel/build.svg';
 import secondPanelShare from '../../assets/local-hack-day/second-panel/share.svg';
 
-const lhdUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSe08q0eD90Cd7R8jRBL0bU788OzB-lnlpSGekWGtCXmGVn36Q/viewform';
-
 const getFaqSection = section => (
   <div>
     <h3>{QUESTIONS[section].title}</h3>
@@ -74,6 +72,7 @@ class LocalHackDay extends React.Component {
           <img className="scenery-desktop fill-width" alt="illustration" src={firstPanelDesktop} />
           <img className="scenery-mobile fill-width" alt="illustration" src={firstPanelMobile} />
           {/* <PrimaryButton text="Join The Waitlist" className="call-to-action register" onClick={() => (window.open(EXTERNAL.WAITLIST_FORM))} /> */}
+          <h3 className="flex jc-center tagline margin-bottom-l">Stay tuned for LHD 2019!</h3>
           <PrimaryButton text="View Hacks" className="call-to-action" onClick={() => (window.open(EXTERNAL.PROJECT_SHOWCASE))} />
           <SecondaryButton text="View Photos" className="call-to-action margin-top-s margin-bottom-m" onClick={() => (window.open(EXTERNAL.PHOTO_ALBUM))} />
         </div>
