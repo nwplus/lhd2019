@@ -24,7 +24,7 @@ export const QUESTIONS = Object.freeze({
     {
       'How can I officially sign up?': (
         <p className="margin-top-none">
-          Please check back in November 2019to register for LHD 2019!
+          Please check back in November 2019 to register for LHD 2019!
         </p>
       ),
     },
